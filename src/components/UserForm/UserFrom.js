@@ -35,11 +35,15 @@ const UserForm = ({ props, onSubmit }) => {
     <form onSubmit={formSubmitHandler}>
       <div>
         <label>Nom</label>
+      </div>
+      <div>
         <input value={name} onChange={nameChangeHandler} type="text" />
       </div>
 
       <div>
         <label>Age(année)</label>
+      </div>
+      <div>
         <input value={age} onChange={ageChangeHandler} type="number" />
       </div>
 
