@@ -7,7 +7,7 @@ const UserForm = ({ props, onSubmit }) => {
   const [age, setAge] = useState('');
 
   const formSubmitHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault(); // enleve le comportement par défault du rechargement de page
 
     const data = {
       id: Math.random(),
@@ -15,6 +15,14 @@ const UserForm = ({ props, onSubmit }) => {
       age: +age,
     };
     console.log(name.length);
+
+    if (name.length === 0 || age.length === 0) {
+      console.log('error');
+    }
+    if (age <= 0) {
+      console.log('l age doit etre supérieur a 0');
+    }
+
     if (name.length >= 3 && age > 0) {
       console.log(data);
       setName('');
